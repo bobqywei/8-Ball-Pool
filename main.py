@@ -26,9 +26,9 @@ pygame.font.init()
 # used fonts
 mainFont = pygame.font.SysFont("impact", 30)
 # loads all sound effects
-hit_sound = pygame.mixer.Sound('hit.wav')
-sunk_sound = pygame.mixer.Sound('sunk.ogg')
-strike_sound = pygame.mixer.Sound('strike.wav')
+hit_sound = pygame.mixer.Sound('sounds/hit.wav')
+sunk_sound = pygame.mixer.Sound('sounds/sunk.ogg')
+strike_sound = pygame.mixer.Sound('sounds/strike.wav')
 # sets the display size
 gameDisplay = pygame.display.set_mode((1400, 800))
 pygame.display.set_caption('8 Ball Pool')
@@ -79,7 +79,7 @@ walls = (pygame.Rect(150, 100, 1100, 50), pygame.Rect(150, 650, 1100, 50), pygam
 # tuple containing coordinates of pockets
 holes = ((210, 160), (700, 150), (1190, 160), (210, 640), (700, 650), (1190, 640))
 # image of pool cue
-pool_cue_original = pygame.image.load('cue.png')
+pool_cue_original = pygame.image.load('images/cue.png')
 # variable that will be used to store rotated version of pool cue image
 pool_cue_rotated = pygame.transform.rotate(pool_cue_original, 0)
 # stores the coordinates of the pool cue image
@@ -89,7 +89,7 @@ mouse_hold_coords = (0, 0)
 # keeps track of the state of the mouse
 mouse_held = False
 # instantiates an object of ball class for the cue ball
-cue_ball = Ball('', 550, 400, 'ball0.png')
+cue_ball = Ball('', 550, 400, 'images/ball0.png')
 # variable that stores the direction of the player cue as a number in degrees
 cue_direction = 0
 # variable used to store the distance the player pulls the cue back to strike the ball
@@ -113,14 +113,14 @@ first_ball_collided_with = None
 # variable that will store the winning player
 winner = None
 # list containing ball objects (all 16 balls)
-balls = [cue_ball, Ball('solids', 950, 400, 'ball1.png'), Ball('solids', 986, 420, 'ball2.png'),
-         Ball('solids', 1022, 420, 'ball3.png'), Ball('solids', 1022, 360, 'ball4.png'),
-         Ball('solids', 968, 390, 'ball5.png'), Ball('solids', 1004, 410, 'ball6.png'),
-         Ball('solids', 1004, 370, 'ball7.png'),
-         Ball('eight', 986, 400, 'ball8.png'), Ball('stripes', 986, 380, 'ball9.png'),
-         Ball('stripes', 1004, 430, 'ball10.png'), Ball('stripes', 1004, 390, 'ball11.png'),
-         Ball('stripes', 1022, 440, 'ball12.png'), Ball('stripes', 1022, 380, 'ball13.png'),
-         Ball('stripes', 968, 410, 'ball14.png'), Ball('stripes', 1022, 400, 'ball15.png')
+balls = [cue_ball, Ball('solids', 950, 400, 'images/ball1.png'), Ball('solids', 986, 420, 'images/ball2.png'),
+         Ball('solids', 1022, 420, 'images/ball3.png'), Ball('solids', 1022, 360, 'images/ball4.png'),
+         Ball('solids', 968, 390, 'images/ball5.png'), Ball('solids', 1004, 410, 'images/ball6.png'),
+         Ball('solids', 1004, 370, 'images/ball7.png'),
+         Ball('eight', 986, 400, 'images/ball8.png'), Ball('stripes', 986, 380, 'images/ball9.png'),
+         Ball('stripes', 1004, 430, 'images/ball10.png'), Ball('stripes', 1004, 390, 'images/ball11.png'),
+         Ball('stripes', 1022, 440, 'images/ball12.png'), Ball('stripes', 1022, 380, 'images/ball13.png'),
+         Ball('stripes', 968, 410, 'images/ball14.png'), Ball('stripes', 1022, 400, 'images/ball15.png')
          ]
 # list for storing the balls that have been potted after each turn
 recent_potted_balls = []
